@@ -1,0 +1,103 @@
+h1, h2 {
+	color: #fff;
+	font-weight: 100;
+}
+
+.branding {
+	background: #bb0505;
+}
+
+nav {
+	background: #fcfcfd;
+}
+
+h4 {
+	font-weight: 100;
+	background: #f1f1f8;
+}
+
+h4 small {
+	color: #909099;
+	font-weight: 500;
+}
+
+.font-name {
+	font-weight: 300;
+	color: #222;
+}
+
+.inactive span {
+	opacity: .4;
+}
+
+.unavailable {
+/* 	opacity: .2; */
+	color: #bb0505;
+	background: rgba(186, 5, 5, 0.05);
+/* 	text-decoration: line-through; */
+}
+
+.available {
+	color: #888;
+}
+
+#iosfonts ul {
+	margin-left: 0;
+}
+
+#iosfonts li {
+	margin-bottom: 1em;
+	list-style-type: none;
+}
+
+li span {
+	color: #aaa;
+}
+
+.font-face span {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.font-face.large span {
+	display: none;
+}
+
+.font-face.large .face-name {
+	display: block;
+	width: 100%;
+	font-size: 2em;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+}
+
+.face-name {
+	font-family: "Helvetica Neue";
+	color: #555;
+}
+
+#iosfonts li:hover {
+	background: #fafafb;
+}
+
+#iosfont li:hover h4 {
+	color: #11111a;
+	background: #aaaaad;
+}
+
+#iosfonts li div.row:hover {
+	background: #d9d9e6;
+}
+
+.notice {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99999;
+}
+
+.alert-box {
+	opacity: .96;
+	margin-bottom: 0;
+}

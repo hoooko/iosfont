@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <title>iOS Fonts</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="iPhone, iPad, iOS, typography, font, iPod" />
+    <meta name="author" content="Michael Critz" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+<body>
+<div id="wrapper">
+
+<header id="global_header" class="row branding">
+	<div class="small-12 columns">
+	    <h1>iOS Fonts</h1>
+	    <h2 class="show-for-medium-up">A Place for Happy Typography</h2>
+	</div>
+</header>
+
+<div class="row description">
+	<p class="small-12 columns">Every font. Every iOS version.</p>
+</div>
+
+<nav id="filters" class="row">
+</nav>
+
+<div id="iosfonts">
+	<div class="row text-center">
+		<div id="loading-view" style="display:none;">
+			<h5>Loading all fonts for iOS</h5>
+			<progress id="progress-indicator" value="0" max="100" style="width:50%">70 %</progress>
+		</div>
+		<script>
+			var loadingView = document.getElementById('loading-view');
+			var progressTimer;
+			var progress = 10;
+			var progressEl = document.getElementById('progress-indicator');
+			
+			var updateProgress = function() {
+				progressEl.setAttribute('value', progress);
+				if (progress < 50) {
+					progress += 3;
+				} else if (progress < 75) {
+					loadingView.style.display='block';
+					progress += .5;
+				} else if (progress < 95) {
+					progress += .1;
+				} else {
+					progress = 95;
+					clearInterval(progressTimer);
+				}
+			}
+			progressTimer = window.setInterval(updateProgress, 50);
+		</script>
+	</div>
+</div>
+
+<footer class="row text-center">
+	<p>A <a href="http://mapoftheunexplored.com">Map of the Unexplored</a> Project</p>
+	<p>Project authors: <a href="http://www.michaelcritz.com/">Michael Critz</a> and <a href="https://github.com/mcritz/iosfonts">GitHub contributors</a></p>
+	<p><a href="https://twitter.com/mike_critz/">Contact</a></p>
+</footer>
+</div>
+
+<script src="js/lib/require.js"></script>
+<script>
+requirejs.config({
+	config: {
+	},
+	paths: {
+		main: "js/main-built"
+	}
+});
+
+requirejs(["main"]);
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5874947-7', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
